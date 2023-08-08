@@ -1,20 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import About from './components/about';
+//add imports for BrowserRouter,Routes and Route
+import {BrowserRouter,Routes,Route}
+from 'react-router-dom';
+//imports for login and about pages
 import Login from './components/login';
+import About from './components/about';
 function App() {
   return (
-  //create routing for about page
+  //generate routing for about and login pages using BrowserRoute,Routes and Route
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<About/>}
+        <Route path="/about" element={<About />}
         />
-        <Route path="/login" element={<Login/>}
+        <Route path="/login" element={<Login />}
         />
-
-      </Routes>
-      </BrowserRouter>
+        
+        </Routes>
+        </BrowserRouter>
+     
   
   );
 }
